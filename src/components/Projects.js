@@ -21,7 +21,14 @@ const Projects = () => {
 
   return (
     <div>
-      <h2><u> <span style={{color:"red"}}> Projects </span></u> <sub>Following are my GitHub Repositores and Web Links</sub> </h2>       
+      <h2>
+        <u>
+          {' '}
+          <span style={{ color: 'red' }}> Projects </span>
+        </u>{' '}
+        <sub>Following are my GitHub Repositories and Web Links</sub>{' '}
+      </h2>
+      <hr></hr>
       {repositories.length === 0 ? (
         <p>No repositories found for {githubUsername}.</p>
       ) : (
@@ -30,11 +37,19 @@ const Projects = () => {
             <li key={repo.id}>
               <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                 {repo.name}
-              </a>
+              </a>{' '}
+              <br />
+              {repo.homepage && (
+                <>
+                  WebsiteUrl:{' '}
+                  <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
+                    {repo.homepage}
+                  </a>{' '}
+                  <br />
+                </>
+              )}
               <p>Description: {repo.description}</p>
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                WebsiteUrl: {repo.name}
-              </a>            </li>
+            </li>
           ))}
         </ul>
       )}

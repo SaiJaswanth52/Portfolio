@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: rgb(85, 67, 70);
+  background-color: rgb(67, 79, 85);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -67,3 +67,5 @@ p{
 .itemsBg{
   background-color:plum
 }
+
+
