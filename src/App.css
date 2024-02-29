@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: rgb(67, 79, 85);
+  background-color: rgb(2, 25, 36);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -47,8 +47,7 @@ body{
   width: 600px;
 }
 .bg-color{
-  background-color:rgb(23, 22, 22);
-}
+  background: linear-gradient(to right, rgb(11, 25, 213), rgb(10, 11, 11));}
 .text{
   float: right;
 }

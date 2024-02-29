@@ -20,7 +20,7 @@ const Projects = () => {
   }, [githubUsername]);
 
   return (
-    <div>
+    <div class="bg-color">
       <h2>
         <u>
           {' '}
