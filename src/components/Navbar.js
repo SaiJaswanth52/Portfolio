@@ -7,30 +7,32 @@ import { Link } from 'react-router-dom';
 
 export default function NavbarEx() {
   return (
-    <div>
-      <Navbar expand="lg" fixed="top" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="/" style={{ color: 'pink' }}>
-            <img
-              src={photo}
-              alt="DP"
-              style={{ width: '100px', height: '100px', borderRadius: '50%' }}
-            />
-          </Navbar.Brand>
+    <Navbar expand="lg" fixed="top" bg="dark" variant="dark" style={{ padding: '3px' }}>
+      <Container>
+        <Navbar.Brand as={Link} to="/" style={{ color: 'pink', fontSize: '3.2rem' }}>
+          <img
+            src={photo}
+            alt="DP"
+            style={{ width: '90px', height: '90px', borderRadius: '50%' }}
+          />
+        </Navbar.Brand>
 
-          <Nav className="ml-auto">
-            <Nav.Link as={Link} to="/AboutMe" style={{ color: 'pink' }}>
+        <Navbar.Toggle aria-controls="navbarNav" />
+
+        <Navbar.Collapse id="navbarNav" className="justify-content-end">
+          <Nav>
+            <Nav.Link as={Link} to="/AboutMe" style={{ color: 'pink', fontSize: '1.5rem' }}>
               AboutMe
             </Nav.Link>
-            <Nav.Link as={Link} to="/Academics" style={{ color: 'pink' }}>
-              Carrear
+            <Nav.Link as={Link} to="/Academics" style={{ color: 'pink', fontSize: '1.5rem' }}>
+              Career
             </Nav.Link>
-            <Nav.Link as={Link} to="/Projects" style={{ color: 'pink' }}>
+            <Nav.Link as={Link} to="/Projects" style={{ color: 'pink', fontSize: '1.5rem' }}>
               Projects
             </Nav.Link>
           </Nav>
-        </Container>
-      </Navbar>
-    </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }

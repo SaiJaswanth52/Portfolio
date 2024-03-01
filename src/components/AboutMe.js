@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function AboutMe() {
-  const [normal, setExpand] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-  const Expand = () => {
-    setExpand(!normal);
+  const toggleExpand = () => {
+    setExpanded(!expanded);
   };
- 
 
   return (
     <div>
       <h2 className="text-info">
         <u>About Me</u>
       </h2>
-      
+
       <p>
         Hi, I'm SaiJaswanthSuraneni, You can call me as "SAI"...
         <br />
@@ -42,7 +41,7 @@ export default function AboutMe() {
         </ul>
       </div>
 
-      {normal && (
+      {expanded && (
         <div className="text-success">
           <p>
             I love to work on interesting projects and collaborate with others
@@ -50,13 +49,11 @@ export default function AboutMe() {
             <u>Some of my hobbies include...</u> <br/>
             Cooking, Watching Games, Sports or Fitness Activities, Professional Networking and a little code.
           </p>
-          
-          
         </div>
       )}
 
-      <button className="btn btn-primary" onClick={Expand}>
-        {normal ? "Show Less" : "More Information"}
+      <button className="btn btn-primary" onClick={toggleExpand}>
+        {expanded ? "Show Less" : "More Information"}
       </button>
     </div>
   );
