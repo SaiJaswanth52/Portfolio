@@ -70,7 +70,7 @@ function Home() {
           </div>
         </div>
         <div className="col-md-6">
-          <img src={Welcome} alt="image" className="Welcome mt-1"></img>{" "}
+          <img src={Welcome} alt="image" className="Welcome mt-1" style={{ maxWidth: '85%' }}></img>{" "}
         </div>
       </div>
     </div>
