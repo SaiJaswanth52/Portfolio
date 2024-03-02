@@ -99,7 +99,7 @@ export default function Academics() {
         {education ? 'Close Education Summary' : 'Education Summary'}
       </Button>} <br></br>
 
-      <a href='https://drive.google.com/file/d/1s24a90Y1Env8VNkjAAGX7_aCaplireos/view?usp=sharing' target='_blank'> My-RESUME</a>
+      <a href='https://drive.google.com/file/d/1qg-1IG5svOistdBtDz4qjb9ig6s5_FDb/view?usp=sharing' target='_blank'> My-RESUME</a>
 
     </div>
   );
