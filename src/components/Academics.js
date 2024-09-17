@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, Button } from 'react-bootstrap';
-import '../App';
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Card, Button } from "react-bootstrap";
+import "../App";
 
 export default function Academics() {
   const [workexp, setWorkExp] = useState(false);
@@ -17,24 +17,31 @@ export default function Academics() {
 
   const WorkExp = () => (
     <div className="m-4 p-4">
-      <h1 className="title"><u>Work Experience</u></h1>
-      {[{
-        CompanyName: 'Tata Consultancy Services',
-        Designation: "Ass.System's Engineer",
-        Duration: '22 Months[February 2021 to December 2022]',
-        Client: "'Ledvance'",
-        Location: "Pune-India.",
-        Tasks: [
-          '-Working on the tickets raised by the users and solve them within SLA',
-          '-Maintaining a set of Applications to provide uninterrupted availability',
-          '-Responsible for creating safe connections for electronic exchange of the data',
-          '-Assisted the development team as well in front-end development',
-          '-Experience in working with and coordinating cross-functional teams operating in different regions and time zones.'
-        ]
-      }].map((exp, key) => (
+      <h1 className="title">
+        <u>Work Experience</u>
+      </h1>
+      {[
+        {
+          CompanyName: "Tata Consultancy Services",
+          Designation: "Ass.System's Engineer",
+          Duration: "22 Months[February 2021 to December 2022]",
+          Client: "'Ledvance'",
+          Location: "Pune-India.",
+          Tasks: [
+            "•	Provided technical support for Java-based applications, resolving production issues within SLA and improving user satisfaction by 15%.",
+            "•	Monitored and maintained infrastructure and tools, reducing system downtime by 10% through proactive troubleshooting.",
+            "•	Assisted in backend development using Java and Spring Boot, working on minor bug fixes and enhancements to improve system performance",
+            "•	Developed RESTful APIs in Java, enabling better data handling and communication across services.",
+            "•	Contributed to improving system architecture, collaborating with senior developers to implement scalable solutions at a junior level.",
+            "•	Implemented front-end features using React.js, enhancing user interface responsiveness and experience for key application modules.",
+          ],
+        },
+      ].map((exp, key) => (
         <div key={key}>
           <h3>Company: {exp.CompanyName}</h3>
-          <p><sub>Designation: {exp.Designation}</sub></p>
+          <p>
+            <sub>Designation: {exp.Designation}</sub>
+          </p>
           <p>Client: {exp.Client}</p>
           <p>Duration: {exp.Duration}</p>
           <p>Location: {exp.Location}</p>
@@ -42,7 +49,9 @@ export default function Academics() {
           <p>Tasks:</p>
           <ul className="list-group">
             {exp.Tasks.map((task, i) => (
-              <li key={i} className="list-group-item itemsBg">{task}</li>
+              <li key={i} className="list-group-item itemsBg">
+                {task}
+              </li>
             ))}
           </ul>
         </div>
@@ -52,33 +61,37 @@ export default function Academics() {
 
   const EduSummary = () => (
     <div>
-      <h2 className="title"><u>Education Summary</u></h2>
+      <h2 className="title">
+        <u>Education Summary</u>
+      </h2>
       <div className="d-flex flex-row">
         {[
           {
             ID: 1,
-            Degree: 'Masters in Computer Science',
-            School: 'University of Central Missouri',
-            Duration: 'January-2023 to May-2024',
-            GPA: '3.77',
-            Location: 'USA-MISSOURI'
+            Degree: "Masters in Computer Science",
+            School: "University of Central Missouri",
+            Duration: "January-2023 to May-2024",
+            GPA: "3.80",
+            Location: "USA-MISSOURI",
           },
           {
             ID: 2,
-            Degree: 'Bachelor of Technology in Computer Science',
-            School: 'LakkiReddy Bali Reddy College',
-            Duration: 'June-2016 to Sept-2020',
-            GPA: '8.05',
-            Location: 'AP,India'
-          }
+            Degree: "Bachelor of Technology in Computer Science",
+            School: "LakkiReddy Bali Reddy College",
+            Duration: "June-2016 to Sept-2020",
+            GPA: "8.05",
+            Location: "AP,India",
+          },
         ].map((ed) => (
           <Card key={ed.ID} className="m-2">
-            <Card.Body className='itemsBg'>
+            <Card.Body className="itemsBg">
               <Card.Title>Degree: {ed.Degree}</Card.Title>
               <Card.Subtitle>School: {ed.School}</Card.Subtitle>
               <Card.Text>
-                Duration: {ed.Duration}<br/>
-                GPA: {ed.GPA}<br/>
+                Duration: {ed.Duration}
+                <br />
+                GPA: {ed.GPA}
+                <br />
                 Location: {ed.Location}
               </Card.Text>
             </Card.Body>
@@ -92,15 +105,24 @@ export default function Academics() {
     <div>
       {workexp && <WorkExp />}
       {education && <EduSummary />}
-      {!education && <Button className="btn btn-primary m-2" onClick={toggleWorkExp}>
-        {workexp ? 'Close Work Experience' : 'Work Experience'}
-      </Button>}
-      {!workexp && <Button className="btn btn-primary m-2" onClick={toggleEducation}>
-        {education ? 'Close Education Summary' : 'Education Summary'}
-      </Button>} <br></br>
-
-      <a href='https://drive.google.com/file/d/1nTnEXGJHRDlu2eC8eMdVqy2w2vxug4lj/view?usp=sharing' target='_blank'> My-RESUME</a>
-
+      {!education && (
+        <Button className="btn btn-primary m-2" onClick={toggleWorkExp}>
+          {workexp ? "Close Work Experience" : "Work Experience"}
+        </Button>
+      )}
+      {!workexp && (
+        <Button className="btn btn-primary m-2" onClick={toggleEducation}>
+          {education ? "Close Education Summary" : "Education Summary"}
+        </Button>
+      )}{" "}
+      <br></br>
+      <a
+        href="https://drive.google.com/file/d/1_nOUcKNwiMZjV5i8Fg-vZyIGeAWpfqn8/view"
+        target="_blank"
+      >
+        {" "}
+        My-RESUME
+      </a>
     </div>
   );
 }

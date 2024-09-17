@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarEx from './components/Navbar';
-import Welcome from './Welcome.jpg';
-import AboutMe from './components/AboutMe';
-import Academics from './components/Academics';
-import Projects from './components/Projects';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavbarEx from "./components/Navbar";
+import Welcome from "./Welcome.jpg";
+import AboutMe from "./components/AboutMe";
+import Academics from "./components/Academics";
+import Projects from "./components/Projects";
+import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressBook, faEnvelope, faMobile } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAddressBook,
+  faEnvelope,
+  faMobile,
+} from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Home() {
@@ -22,12 +26,12 @@ function Home() {
     <ul className="list-group">
       <li className="list-group-item">
         <FontAwesomeIcon icon={faMobile} />
-        PhoneNumber: +1(479)8660883
+        PhoneNumber: +1(913)3588997
       </li>
 
       <li className="list-group-item">
         <FontAwesomeIcon icon={faEnvelope} />
-        Gmail: saijaswanth52@gmail.com
+        Gmail: saideveloper90@gmail.com
       </li>
 
       <li className="list-group-item">
@@ -43,7 +47,7 @@ function Home() {
       </li>
       <li className="list-group-item">
         <FontAwesomeIcon icon={faAddressBook} />
-        Address: OverlandPark-Kansas.
+        Address: Kansas,United States Of America.
       </li>
     </ul>
   );
@@ -54,23 +58,30 @@ function Home() {
         <div className="col-md-6">
           <p>
             Hi, I am{" "}
-            <span style={{ color: "Red", fontSize: "30px", fontStyle: "italic" }}>
+            <span
+              style={{ color: "Red", fontSize: "30px", fontStyle: "italic" }}
+            >
               <u>'SaiJaswanthSuraneni'</u>
             </span>{" "}
             Welcome to my Portfolio...
           </p>
           <div className="m-3 p-2">
-            <b className="text-info">
-              <u>Contact Information</u>
-            </b>
+            <b className="text-info">{/* <u>Contact Information</u> */}</b>
             <button className="btn btn-link" onClick={ContactDetails}>
-              {contact ? "Hide Contact" : "Show Contact"}
+              {contact
+                ? "Hide Contact Information"
+                : "Show Contact Information"}
             </button>
             {contact && ContactInfo}
           </div>
         </div>
         <div className="col-md-6">
-          <img src={Welcome} alt="image" className="Welcome mt-1" style={{ maxWidth: '100%' }}></img>{" "}
+          <img
+            src={Welcome}
+            alt="image"
+            className="Welcome mt-1"
+            style={{ maxWidth: "100%" }}
+          ></img>{" "}
         </div>
       </div>
     </div>
@@ -80,7 +91,7 @@ function Home() {
 function App() {
   return (
     <Router>
-      <div className="App" style={{ paddingTop: '70px' }}>
+      <div className="App" style={{ paddingTop: "70px" }}>
         <header className="App-header">
           <NavbarEx />
           <Routes>
