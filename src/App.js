@@ -26,7 +26,7 @@ function Home() {
     <ul className="list-group">
       <li className="list-group-item">
         <FontAwesomeIcon icon={faMobile} />
-        PhoneNumber: +1(913)3588997
+        PhoneNumber: +1(913)2534122
       </li>
 
       <li className="list-group-item">

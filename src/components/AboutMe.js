@@ -19,8 +19,8 @@ export default function AboutMe() {
         <br />
         Pursued my masters in Computer Science at UNIVERSITY of CENTRAL MISSOURI{" "}
         <br />
-        and a passionate Full Stack developer with Over 3 Years Of Experience as
-        an web developer. <br />
+        and a passionate Web Developer with Over 4 Years Of Working Experience
+        as an Java Full Stack Developer. <br />
         {/* I specialize in Front-End development skills, <br />
         and I'm enthusiastic about becoming a REACT JS Developer.. */}
       </p>
@@ -45,6 +45,9 @@ export default function AboutMe() {
             Technologies: JSON and Web Services (RESTful).
           </li>
           <li className="list-group-item itemsBg">
+            Version Control and CI/CD pipelines: Git, Github, Jenkins
+          </li>
+          <li className="list-group-item itemsBg">
             IDE: Visual Studio Code, PyCharm, MS Office, STS, Eclipse.
           </li>
           <li className="list-group-item itemsBg">
@@ -59,6 +62,10 @@ export default function AboutMe() {
           <li className="list-group-item itemsBg">
             Tools: MySQL, Postman, XAMPP, Axure [For Building Prototypes], and
             Trello.
+          </li>
+          <li className="list-group-item itemsBg">
+            Cloud Platforms & DevOps: Amazon Web Services (AWS), Microsoft
+            Azure, Docker, Kubernetes, Kafka
           </li>
           <li className="list-group-item itemsBg">
             Software Engineering: Knowledge on Waterfall model and Agile
